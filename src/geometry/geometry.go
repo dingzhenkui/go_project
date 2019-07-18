@@ -3,10 +3,21 @@ package main
 import (
 	"fmt"
 	"geometry/rectangle"
+	"log"
 )
 
+var aa, bb float64 = 7, 9
+
+func init() {
+	println("use package initialized")
+	if aa < 0 {
+		log.Fatal("lenth is less than 0")
+	}
+	if bb < 0 {
+		log.Fatal("width is less than 0")
+	}
+}
 func main() {
-	var aa, bb float64 = 7, 9
 	fmt.Println("Begin")
 
 	fmt.Printf("area is %.2f\n", rectangle.Area(aa, bb))
